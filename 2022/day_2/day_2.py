@@ -31,4 +31,4 @@ def get_score_2(opponent, second_column):
 
 
 print(sum(get_score_2(*line.strip().split(' '))
-          for line in open('./input.txt')))
+          for line in open('input.txt')))
