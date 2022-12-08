@@ -1,4 +1,4 @@
-trees = [[int(col) for col in row] for row in open('./sample.txt', 'r').read().split()]
+trees = [[int(col) for col in row] for row in open('./input.txt', 'r').read().split()]
 visible = [[0 for col in range(len(trees))] for row in range(len(trees))]
 
 print(trees)
@@ -54,4 +54,34 @@ print('after')
 for row in visible:
     print(row)
 
-print(sum(col for row in visible for col in row))
+print('part 1 =', sum(col for row in visible for col in row))
+
+ans = 0
+for row in range(len(trees)):
+    for col in range(len(trees)):
+        curr = trees[row][col]
+
+        left, right, up, down = 0, 0, 0, 0
+        for i in range(col - 1, -1, -1):
+            left += 1
+            if trees[row][i] >= curr:
+                break
+
+        for i in range(col + 1, len(trees)):
+            right += 1
+            if trees[row][i] >= curr:
+                break
+
+        for i in range(row - 1, -1, -1):
+            down += 1
+            if trees[i][col] >= curr:
+                break
+
+        for i in range(row + 1, len(trees)):
+            up += 1
+            if trees[i][col] >= curr:
+                break
+
+        ans = max(ans, left * right * up * down)
+
+print('part 2 =', ans)
