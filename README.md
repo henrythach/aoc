@@ -9,3 +9,7 @@ https://adventofcode.com/2022
 - [x] https://adventofcode.com/2022/day/5
 - [x] https://adventofcode.com/2022/day/6
 - [x] https://adventofcode.com/2022/day/7
+- [x] https://adventofcode.com/2022/day/8
+- [x] https://adventofcode.com/2022/day/9
+- [x] https://adventofcode.com/2022/day/10
+- [x] https://adventofcode.com/2022/day/11
